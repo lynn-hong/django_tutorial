@@ -1,7 +1,7 @@
 ## python 가상환경 생성하기
 
-***introduction에도 적어두었지만 [장고걸스 튜토리얼](https://tutorial.djangogirls.org/ko/)을 접하지 못한 분들은
-이걸 먼저 따라해보시길 바랍니다.***
+***introduction에도 적어두었지만 장고에 익숙하지 않은 분들은
+[장고걸스 튜토리얼](https://tutorial.djangogirls.org/ko/)을 먼저 따라해보시길 바랍니다.***
 
 -----
 
