@@ -7,5 +7,7 @@
     * [이슈 기반 프로젝트 관리](chapter-1/project.md)
     
 * [Day 2]()
-    * [django 프로젝트 생성하기](chapter-2/django_project.md)
+    * [포트폴리오 사이트 기획하기](chapter-2/planning.md)
+    * [python 가상환경 생성하기](chapter-2/virtualenv.md)
+    * [django 프로젝트 시작하기](chapter-2/django_project.md)
     
