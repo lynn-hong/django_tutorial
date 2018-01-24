@@ -54,6 +54,13 @@ source ~/.bashrc
 잘 생성되었는지 확인하고 싶다면 `lsvirtualenv` 명령어로 생성된 가상 환경의 목록을 확인해볼 수 있어요.
 ```bash
 mkvirtualenv django
+lsvirtualenv
+```
+
+만약 python 인터프리터 버전을 명시해서 가상환경을 생성하고 싶다면 아래 명령어를 실행하면 돼요.
+`{python 인터프리터 절대경로}` 부분을 실제 위치로 바꿔주세요!
+```bash
+mkvirtualenv -p {python 인터프리터 절대경로} django
 ```
 
 가상 환경으로 진입하기 위해서는 머신 내 어느 위치에서든 `workon`이라는 명령어를 실행하면 된답니다.

@@ -31,3 +31,14 @@
 (django) ~/django$ django-admin startproject mysite .
 ```
 
+### 기본 세팅 바꿔주기
+웹서버를 구동시키기 전에 몇 가지 설정을 바꿔주려고 해요. 
+우리가 모두 장고걸스 튜토리얼을 기본적으로 수료했다는 가정 하에,
+여기서는 디렉토리의 구조나 각 컴포넌트들의 설명은 하지 않을게요.
+상세한 설명을 보고 싶은 분들은 [여기](https://tutorial.djangogirls.org/ko/django_start_project/)를
+참고해주세요!
+
+바꿔주어야 할 스크립트는 `mysite/settings.py`에요
+
+### MySQL 데이터베이스와 연결하기
+
