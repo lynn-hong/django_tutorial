@@ -46,9 +46,9 @@ ALLOWED_HOSTS = ['127.0.0.1']
 TIME_ZONE = 'Asia/Seoul'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 ```
-W> `ALLOWED_HOSTS`의 경우 remote(AWS 등 원격) 환경에서 서버를 세팅하실 때에는 
+> **Warning** `ALLOWED_HOSTS`의 경우 remote(AWS 등 원격) 환경에서 서버를 세팅하실 때에는 
 `ALLOWED_HOSTS = ['*']`이렇게 모든 host에 대해 접근을 풀어 주셔야 접속이 가능합니다.
 (접속을 시도할 로컬 IP가 고정인 경우에는 그것에 대해서만 풀어 주셔도 됩니다.)
 remote 서버 쪽에서도 outbound와 port 설정을 물론 잘 해주셔야겠지요!
 
-이제 django 프로젝트에서 사용할 model을 생성하고 이를 데이터베이스와 연결할 차례에요.
+이제 다음은 django 프로젝트에서 사용할 model을 생성하고 이를 데이터베이스와 연결할 차례에요.
