@@ -6,3 +6,4 @@
 - ***[django girls 튜토리얼](https://tutorial.djangogirls.org/ko/)을 
 한 번이라도 따라해 보신 분들을 대상으로 합니다.***
 django를 처음 접하는 분들은 장고걸스 튜토리얼이 아주 잘 되어 있으니 그걸 먼저 따라해보시길 권장합니다!
+- `python==3.5.2`, `django==1.8.0`, database: `MySQL` 사용합니다

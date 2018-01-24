@@ -50,5 +50,8 @@ git clone git@github.com:[github 닉네임]/[repo 이름].git
 
 - 이렇게 필요한 컨텐츠들을 제작하여 `docs` 디렉토리에 넣어주고,
 나머지 코드나 리소스들은 루트 위치에서 `pysrc` 등의 이름으로 추가해주면 된다.
-- 추가적인 설명은 [gitbook toolchain](https://toolchain.gitbook.com/structure.html) 페이지를 참고
 - 이제 다음은 이 프로젝트에 실제 python 패키지를 추가해 볼 차례!
+
+### Reference
+- [gitbook toolchain](https://toolchain.gitbook.com/structure.html)
+- [gitbook toolchain 한국어 번역 페이지](https://tinydew4.gitbooks.io/gitbook/content/ko/structure.html)
