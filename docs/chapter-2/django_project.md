@@ -24,6 +24,8 @@
 (django) ~$ mkdir django
 (django) ~$ cd django
 ```
+> **Note** 앞으로 이 `django` 디렉토리를 'django 루트 디렉토리'라고 지칭할게요.
+쉽게 생각해서 `manage.py` 스크립트가 있는 위치를 말합니다!
 
 아래 명령어를 실행해주세요. `mysite`라는 이름의 프로젝트가 생성됩니다.
 

@@ -10,5 +10,6 @@
     * [포트폴리오 사이트 기획](chapter-2/planning.md)
     * [python 가상환경 생성](chapter-2/virtualenv.md)
     * [django 프로젝트 시작](chapter-2/django_project.md)
-    * [model 생성과 데이터베이스 연결](chapter-2/model_database.md)
+    * [데이터베이스 설정](chapter-2/database.md)
+    * [모델 생성](chapter-2/model.md)
     
