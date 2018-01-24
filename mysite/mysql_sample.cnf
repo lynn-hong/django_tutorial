@@ -1,0 +1,6 @@
+[client]
+database = {내 DB 이름}
+host = {DB 호스트 IP. local인 경우 'localhost'라고 적음}
+user = {DB 유저네임}
+password = {DB 비밀번호}
+default-character-set = {적절하게 utf8 등 설정}

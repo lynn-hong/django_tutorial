@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except:
+    pass
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -76,8 +81,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/home/lynn/workspace/django/django_tutorial/mysite/mysql.cnf',
+            'sql_mode': 'traditional',
+            'init_command': 'SET foreign_key_checks = 0;',
+        },
     }
 }
 
