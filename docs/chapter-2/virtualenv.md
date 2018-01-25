@@ -59,7 +59,9 @@ lsvirtualenv
 
 만약 python 인터프리터 버전을 명시해서 가상환경을 생성하고 싶다면 아래 명령어를 실행하면 돼요.
 `{python 인터프리터 절대경로}` 부분을 실제 위치로 바꿔주세요!
+python 인터프리터 경로를 찾기 위해서는 `which python` 또는 `which python3`와 같은 명령어를 이용해주세요.
 ```bash
+which python
 mkvirtualenv -p {python 인터프리터 절대경로} django
 ```
 
