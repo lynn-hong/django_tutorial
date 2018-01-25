@@ -1,2 +1,3 @@
 mysite/mysql.cnf
+portfolio/migrations
 *.pyc
