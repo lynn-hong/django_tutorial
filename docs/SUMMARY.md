@@ -11,5 +11,6 @@
     * [python 가상환경 생성](chapter-2/virtualenv.md)
     * [django 프로젝트 시작](chapter-2/django_project.md)
     * [데이터베이스 설정](chapter-2/database.md)
-    * [모델 생성](chapter-2/model.md)
+    * [모델 생성의 기본](chapter-2/model.md)
+    * [모델 생성과 migrate](chapter-2/model_migrate.md)
     
