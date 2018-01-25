@@ -123,6 +123,21 @@ class About(models.Model):
 우리가 MySQL에서 먼저 정의했던 테이블 구조대로 django model 클래스가 자동 생성되었어요!
 혹시 여기서 약간 손보고 싶은 부분이 있다면 수정해주세요.
 
+그리고 여기서 하나 더 해 수정해주어야 하는 곳이 있는데, 각 클래스마다 `Meta` 안에 들어있는
+`magaged = False` 이 부분을 `True`로 바꿔주세요!
+authentication 관련 자동 생성 클래스들이 많이 있을 텐데 다른 것들은 수정할 필요 없고
+우리가 직접 생성한 테이블들만 `True`로 변경해주세요.
+```python
+class About(models.Model):
+    about_me = models.CharField(max_length=255)
+    home_img = models.CharField(max_length=45, blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'about'
+```
+> `managed`를 `False`로 두면 스크립트에서의 변경 사항이 DB에 반영되지 않기 때문에 바꿔줍니다!
+
 
 ### model migration
 `model.py`가 변경되었으니 migration을 해 주어야 해요.
