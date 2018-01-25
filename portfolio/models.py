@@ -17,7 +17,7 @@ class About(models.Model):
     home_img = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'about'
 
 
@@ -134,7 +134,7 @@ class Domain(models.Model):
     icon = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'domain'
 
 
@@ -150,7 +150,7 @@ class Experience(models.Model):
     ex_type = models.ForeignKey('ExperienceType', db_column='ex_type')
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'experience'
 
 
@@ -158,7 +158,7 @@ class ExperienceType(models.Model):
     title = models.CharField(unique=True, max_length=45)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'experience_type'
 
 
@@ -173,7 +173,7 @@ class Project(models.Model):
     proj_url = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'project'
 
 
@@ -187,7 +187,7 @@ class Publication(models.Model):
     p_url = models.CharField(max_length=300, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'publication'
 
 
@@ -195,5 +195,5 @@ class PublicationType(models.Model):
     p_type = models.CharField(unique=True, max_length=45)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'publication_type'
