@@ -89,15 +89,41 @@ CREATE TABLE `publication` (
 
 | 테이블 이름 | 설명 |
 | ------ | ------ |
-| about | 메인 사진, about 아래에 있는 설명 문단을 관리합니다 |
-| domain | 메인 페이지의 이름 아래 움직이는 텍스트, 나의 관심 분야(Job domain) 설명 등을 관리합니다 |
-| experience_type | 학업, 직장, 수상 등 경력의 종류를 관리합니다 |
-| experience | 학업, 직장, 수상 등 경력 사항을 관리합니다 |
-| project | 프로젝트 기본 정보를 관리합니다 |
-| publication_type | 학술논문, 단행본 등 출판물의 종류를 관리합니다 |
-| publication | 학술논문, 단행본 등 출판물의 정보를 관리합니다 |
+| about | **메인 사진**, about 아래에 있는 **설명 문단**을 관리합니다 |
+| domain | 메인 페이지의 이름 아래 움직이는 텍스트, 나의 **관심 분야(Job domain) 설명** 등을 관리합니다 |
+| experience_type | 학업, 직장, 수상 등 **경력의 종류**를 관리합니다 |
+| experience | 학업, 직장, 수상 등 **경력 사항**을 관리합니다 |
+| project | **프로젝트 기본 정보**를 관리합니다 |
+| publication_type | 학술논문, 단행본 등 출판물의 **종류**를 관리합니다 |
+| publication | 학술논문, 단행본 등 출판물의 **정보**를 관리합니다 |
 
 
 
 ### MySQL 테이블을 model로 가져오기
+이제 생성한 MySQL 테이블 정보를 거꾸로 django `model.py`로 가져올 차례에요.
+아래 명령어를 실행해주세요.
+```bash
+(django) ~/django$ python manage.py inspectdb > portfolio/models.py
+(django) ~/django$ ls -al
+```
 
+`ls -al`의 결과로 해당 위치의 파일 목록이 보일 텐데 그 중 `models.py`라는 파일이 생성된 것을 확인할 수 있을 거에요!
+remote 서버와 local을 동기화시켜 진행하고 계신 분들은 이 파일을 꼭 local 환경으로 내려받기 해 주세요.
+파일을 한번 열어 보면 대략 아래와 같은 모습일거에요. 'about' 테이블을 예로 하나 확인해볼까요?
+```python
+class About(models.Model):
+    about_me = models.CharField(max_length=255)
+    home_img = models.CharField(max_length=45, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'about'
+```
+
+우리가 MySQL에서 먼저 정의했던 테이블 구조대로 django model 클래스가 자동 생성되었어요!
+혹시 여기서 약간 손보고 싶은 부분이 있다면 수정해주세요.
+
+
+
+### Reference
+- [Integrating Django with a legacy database](https://docs.djangoproject.com/en/2.0/howto/legacy-databases/)

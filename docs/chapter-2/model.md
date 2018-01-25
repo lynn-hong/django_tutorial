@@ -35,6 +35,29 @@ INSTALLED_APPS = (
 )
 ```
 
+django 어플리케이션을 생성하면 그 디렉토리 구조는 아래와 같은 형태일거에요.
+```bash
+.
+portfolio/
+   |-- migrations/
+   |-- __init__.py
+   |-- admin.py
+   |-- models.py
+   |-- tests.py
+   |-- views.py
+manage.py
+... (생략)
+```
+
+이 중 `models.py`를 열어 보면 아래와 같이 아무 내용이 없이 비어 있어요.
+```python
+from django.db import models
+
+# Create your models here.
+```
+
+이제 이 빈 부분을 채워볼거에요!
+
 
 ### 어떻게 model을 정의해야 할까요?
 이제 모델을 정의해볼 차례에요. 우리에게 필요한 클래스들은 무엇이 있을까요?
