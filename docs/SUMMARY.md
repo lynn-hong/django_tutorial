@@ -14,3 +14,5 @@
     * [모델 생성의 기본](chapter-2/model.md)
     * [모델 생성과 migrate](chapter-2/model_migrate.md)
     
+* [Day 3]()
+    * [admin 페이지 만들기](chapter-3/admin.md)

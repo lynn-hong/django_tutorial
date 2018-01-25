@@ -124,6 +124,50 @@ class About(models.Model):
 혹시 여기서 약간 손보고 싶은 부분이 있다면 수정해주세요.
 
 
+### model migration
+`model.py`가 변경되었으니 migration을 해 주어야 해요.
+아래 명령어를 실행해서 migration 파일을 생성해주세요.
+```bash
+(django) ~/django$ python manage.py makemigrations
+Migrations for 'portfolio':
+  0001_initial.py:
+    - Create model AuthGroup
+    - Create model AuthGroupPermissions
+    - Create model AuthPermission
+    - Create model AuthUser
+    - Create model AuthUserGroups
+    - Create model AuthUserUserPermissions
+    - Create model DjangoAdminLog
+    - Create model DjangoContentType
+    - Create model DjangoMigrations
+    - Create model DjangoSession
+    - Create model About
+    - Create model Domain
+    - Create model Experience
+    - Create model ExperienceType
+    - Create model Project
+    - Create model Publication
+    - Create model PublicationType
+    - Add field p_type to publication
+    - Add field ex_type to experience
+```
+
+형식적으로 아래 명령어도 실행해주세요.
+`model.py` 파일을 이용해서 데이터베이스에 테이블을 생성하거나 변경해주는 건데
+우리는 DB 테이블을 먼저 생성해 두었기 때문에 `No migrations to apply.`라는 문구가 뜰 거에요!
+```bash
+(django) ~/django$ python manage.py migrate
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages
+  Apply all migrations: admin, auth, contenttypes, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  No migrations to apply.
+```
+
 
 ### Reference
 - [Integrating Django with a legacy database](https://docs.djangoproject.com/en/2.0/howto/legacy-databases/)
