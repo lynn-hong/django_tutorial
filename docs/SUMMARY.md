@@ -16,3 +16,6 @@
     
 * [Day 3]()
     * [admin 페이지 만들기](chapter-3/admin.md)
+    * [url 만들기](chapter-3/url.md)
+    * [템플릿 화면에 띄우기](chapter-3/template.md)
+    * [views 수정하기](chapter-3/views.md)

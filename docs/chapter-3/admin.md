@@ -157,6 +157,7 @@ class PublicationType(models.Model):
 > **Warning** python2 환경에서 진행하고 계신 분들은 `def __str__(self):`이 아니라
 `def __unicode__(self):`로 수정해주세요!
 
+
 수정하셨으면 이제 아래와 같이 데이터가 보일거에요!
 ![모델 수정 후 데이터 목록](img/11.PNG)
 
