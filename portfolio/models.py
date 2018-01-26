@@ -141,7 +141,7 @@ class Domain(models.Model):
 class Experience(models.Model):
     start = models.DateField()
     end = models.DateField(blank=True, null=True)
-    title_kor = models.IntegerField()
+    title_kor = models.CharField(max_length=150)
     title_eng = models.CharField(max_length=150, blank=True, null=True)
     location_kor = models.CharField(max_length=100)
     location_eng = models.CharField(max_length=150)
@@ -161,6 +161,8 @@ class ExperienceType(models.Model):
         managed = True
         db_table = 'experience_type'
 
+    def __str__(self):
+        return self.title
 
 class Project(models.Model):
     title_kor = models.CharField(max_length=45)
@@ -197,3 +199,6 @@ class PublicationType(models.Model):
     class Meta:
         managed = True
         db_table = 'publication_type'
+
+    def __str__(self):
+        return self.p_type
