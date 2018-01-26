@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
+from .models import About, Domain, Experience, ExperienceType, Project, Publication, PublicationType
 
-# Create your views here.
+class Index(TemplateView):
+    template_name = 'portfolio/index.html'
