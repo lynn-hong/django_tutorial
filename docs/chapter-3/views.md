@@ -86,6 +86,8 @@ CLIENT SECTION END
 
 `HEADER SECTION`을 찾아 `<nav>` 태그 안의 내용을 아래와 같이 수정해주세요.
 저는 제 취향대로 아이콘을 변경했어요.
+`blog` 탭의 경우 지금은 만들지 않을 거지만 혹시 개인 블로그가 있는 경우
+링크하시라고 저는 코멘트 처리만 해 두었어요.
 ```html
 <nav class="menu">
     <!-- Menu Links -->
