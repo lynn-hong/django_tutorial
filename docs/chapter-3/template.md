@@ -108,21 +108,19 @@ Quit the server with CONTROL-C.
 아직 `html` 페이지로 이동하도록 링크가 되어 있는 부분들은 수정하지 않아도 돼요!
 ```html
 <!-- Bootstrap -->
-<link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% raw %}{% static 'assets/bootstrap/css/bootstrap.min.css' %}{% endraw %}" rel="stylesheet">
 <!-- Font-Awesome -->
-<link href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% raw %}{% static 'assets/font-awesome/css/font-awesome.min.css' %}{% endraw %}" rel="stylesheet">
 <!-- Lightbox -->
-<link href="{% static 'assets/lightbox/css/lightbox.css' %}" rel="stylesheet">
+<link href="{% raw %}{% static 'assets/lightbox/css/lightbox.css' %}{% endraw %}" rel="stylesheet">
 ```
 
 그리고 `index.html` 파일의 가장 상단에 아래 한 줄을 추가해주세요.
 ```html
-{% load staticfiles %}
+{% raw %}{% load staticfiles %}{% endraw %}
 ```
 
 다시 웹 브라우저로 돌아와 새로고침을 눌러보세요.
 아래와 같이 제대로 화면이 보일 거에요!
 ![정상적으로 static 파일들이 불러와 진 화면](img/15.png)
 
-
-### model과 view 연결하기
