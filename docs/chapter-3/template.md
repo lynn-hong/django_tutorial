@@ -104,8 +104,8 @@ Quit the server with CONTROL-C.
 <link href="../../../JohnDoe-gh-pages/assets/lightbox/css/lightbox.css" rel="stylesheet">
 ```
 
-이렇게 `href`나 `src`로 경로가 링크되어 있는 부분들을 찾아 아래처럼 수정해주세요.
-아직 `html` 페이지로 링크가 되어 있는 부분들은 수정하지 않아도 돼요!
+이렇게 `href`나 `src`, `url`로 경로가 링크되어 있는 부분들을 찾아 아래처럼 수정해주세요.
+아직 `html` 페이지로 이동하도록 링크가 되어 있는 부분들은 수정하지 않아도 돼요!
 ```html
 <!-- Bootstrap -->
 <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
