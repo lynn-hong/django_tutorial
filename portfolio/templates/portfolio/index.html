@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Website Title -->
-    <title>John Doe - Professional web designer and photographer</title>
+    <title>Lynn Hong - Portfolio site tutorial</title>
     <!-- Bootstrap -->
     <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 	<!-- Font-Awesome -->
@@ -47,12 +47,14 @@
 				<nav class="menu">
 				    <!-- Menu Links -->
 					<div class="icon-list">
-						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-						<a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-						<a href="index.html#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
-						<a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
-						<a href="index.html#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>
-						<a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+						<a href="#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+						<a href="#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+						<a href="#domain"><i class="fa fa-fw fa-check-circle-o"></i><span>Job Domain</span></a>
+                        <a href="#academy"><i class="fa fa-fw fa-university"></i><span>Academy</span></a>
+                        <a href="#work"><i class="fa fa-fw fa-briefcase"></i><span>Work</span></a>
+						<a href="#portfolio"><i class="fa fa-fw fa-tasks"></i><span>Portfolio</span></a>
+						<!--<a href="index.html#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>-->
+						<a href="#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
 					</div>
 				</nav>
 			    </div>
@@ -65,15 +67,15 @@
 			  <!-- Slider Button (don't edit!)-->
               <div class="row">
                 <div class="col-md-12 text-right navicon">
-                  <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
+                  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
                 </div>
               </div>
 			  <!-- HEADER HEADLINE -->
               <div class="row">
                 <div class="col-md-8 col-md-offset-1 inner">
                   <h1 class="animated fadeInDown">
-                    J<span style="color:#E04343;">o</span>hn<br/>
-                    <span>D<span style="color:#FFE800">o</span>e</span>
+                    L<span style="color:#E04343;">y</span>nn<br/>
+                    <span>Ho<span style="color:#FFE800">n</span>g</span>
                   </h1><!-- Title -->
                   <h3 class="animated fadeInUp delay-05s"><span class="rotate">Web Designer,Photographer,3d Artist</span></h3><!-- Text Rotator -->
                 </div>
@@ -118,9 +120,9 @@
 
 
 <!-- ==========================
-        SERVICE SECTION 
+        DOMAIN SECTION
         =========================== -->
-        <section class="features text-center section-padding" id="service">
+        <section class="features text-center section-padding" id="domain">
           <div class="container">
         <!-- Headline -->
             <div class="row">
@@ -173,7 +175,7 @@
 		    <!-- About 1 -->
 			<div class="row color-bg">
 				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(../../../JohnDoe-gh-pages/img/about1.png)"></div><!-- about image 1 -->
+					<div class="about-image" style="background-image:url({% static 'img/about1.png' %}  )"></div><!-- about image 1 -->
 				</div>
 				<div class="col-md-6 about-text">
 					<h6>High quality webdesign</h6><!-- headline-->
@@ -189,13 +191,13 @@
 					<a href="index.html#team" class="weight-outline-btn">Read more</a>	<!-- read more button  -->				
 				</div>
 				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(../../../JohnDoe-gh-pages/img/about2.png)"></div><!-- about image 2 -->
+					<div class="about-image" style="background-image:url({% static 'img/about2.png' %})"></div><!-- about image 2 -->
 				</div>
 			</div>
 			<!-- About 3 -->
 			<div class="row color-bg">
 				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(../../../JohnDoe-gh-pages/img/about3.png)"></div><!-- about image 3 -->
+					<div class="about-image" style="background-image:url({% static 'img/about3.png' %})"></div><!-- about image 3 -->
 				</div>
 				<div class="col-md-6 about-text">
 					<h6>3d modeling and animations</h6><!-- Headline-->
@@ -347,117 +349,19 @@
 		<!-- ==========================
         CUSTOM SPACER END
         =========================== -->
-		
-		
 
-    <!-- ==========================
-        BLOG SECTION 
-        =========================== -->
-    <section class="text-center section-padding" id="blog">
-          <div class="container">
-        <!-- Headline -->
-        <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">My <span>little</span> blog</h1>
-              </div>
-            </div><br><br>
-      
-      <!-- Blog Slider -->
-            <div class="row">
-              <div id="blogSlider">
-                <ul class="slides">
-                  <li>
-            <!-- Blog Entry 1 -->
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Minds</h2><!-- Headline -->
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description-->
-                    </div>
-          <!-- Blog Entry 2 -->
-                    <div class="col-md-4 wp4 delay-05s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Hearts</h2><!-- Headline -->
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
-                    </div>
-          <!-- Blog Entry 3 -->
-                    <div class="col-md-4 wp4 delay-1s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog3.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Ideas</h2><!-- Headline -->
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description-->
-                    </div>
-                  </li>
-                  <li>
-            <!-- Blog Entry 4 -->
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog1.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Minds</h2><!-- Headline -->
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
-                    </div>
-          <!-- Blog Entry 5 -->
-                    <div class="col-md-4 wp4 delay-05s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog2.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Hearts</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                    </div>
-          <!-- Blog Entry 6 -->
-                    <div class="col-md-4 wp4 delay-1s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="img">
-                          <img src="../../../JohnDoe-gh-pages/img/blog3.jpg" class="grayscale" alt="Blog Item"><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Creative Ideas</h2><!-- Headline -->
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p><!-- Description -->
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-    <!-- ==========================
-        BLOG SECTION END
-        =========================== -->
-    
-        
 		
 		<!-- ==========================
         CLIENT SECTION 
         =========================== -->
-		<div class="container-fluid">
+		<!--<div class="container-fluid">
 			<div class="row color-bg">
 				<!-- Left Image -->
-				<div class="col-md-6 nopadding features-intro-img wow fadeInLeft">
-					<div class="about-image" style="background-image:url(../../../JohnDoe-gh-pages/img/clients.png)"></div>
+				<!--<div class="col-md-6 nopadding features-intro-img wow fadeInLeft">
+					<div class="about-image" style="background-image:url({% static 'img/clients.png' %})"></div>
 				</div>
 				<!-- Clients / Testimonials -->
-				<div class="col-md-6 nopadding about-text">
+				<!--<div class="col-md-6 nopadding about-text">
 				<h6>What our clients said</h6>
 					<div id="clientSlider">
 					   <ul class="slides">
@@ -469,38 +373,10 @@
 				</div>
 			</div>
 		</div>
+-->
 		<!-- ==========================
         CLIENTS SECTION END
         =========================== -->
-		
-		
-		
-		
-		
-		<!-- ==========================
-        NEWSLETTER SECTION 
-        =========================== -->
-        <section>
-		<div class="container-fluid">
-				<div class="row color-bg">
-				    <div class="col-md-6 nopadding subscribe text-center">
-					 <h1><i class="fa fa-paper-plane"></i><span>Subscribe our Newsletter</span></h1><!-- Heading -->
-                     <form action="index.html#">
-                       <input type="text" name="" value="" placeholder="" required><!-- E-Mail -->
-                       <input type="submit" name="" value="Send"><!-- Submit Button -->
-                    </form>   
-					</div>
-					<div class="col-md-6 nopadding features-intro-img">
-						 <div class="about-image" style="background-image:url(../../../JohnDoe-gh-pages/img/newsletter.png)"></div><!-- Right Image -->
-					</div>
-				</div>
-			</div>
-        </section>
-		<!-- ==========================
-        NEWSLETTER SECTION END
-        =========================== -->
-
-		
 		
 		<!-- ==========================
         CONTACT SECTION
