@@ -74,10 +74,11 @@ CLIENT SECTION END
       L<span style="color:#E04343;">y</span>nn<br/>
       <span>Ho<span style="color:#FFE800">n</span>g</span>
 ```
-> **Quiz** 이렇게 알파벳 하나하나에 스타일을 입히는 건 너무 비효율적이고 귀찮은 방식이죠!
-이것도 django 클래스로 지정해서 알파벳과 색을 관리할 수 있어요. 어떻게 해야 할까요?
 
 ![메인 페이지 이름 알파벳 수정 후](img/17.PNG)
+
+> **Quiz** 이렇게 알파벳 하나하나에 스타일을 입히는 건 너무 비효율적이고 귀찮은 방식이죠!
+이것도 django 클래스로 지정해서 알파벳과 색을 관리할 수 있어요. 어떻게 해야 할까요?
 
 
 이번에는 상단 메뉴 탭을 수정해볼게요.
@@ -92,19 +93,30 @@ CLIENT SECTION END
 <nav class="menu">
     <!-- Menu Links -->
     <div class="icon-list">
-        <a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-        <a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-        <a href="index.html#domain"><i class="fa fa-fw fa-check-circle-o"></i><span>Job Domain</span></a>
-        <a href="index.html#academy"><i class="fa fa-fw fa-university"></i><span>Academy</span></a>
-        <a href="index.html#work"><i class="fa fa-fw fa-briefcase"></i><span>Work</span></a>
-        <a href="index.html#portfolio"><i class="fa fa-fw fa-tasks"></i><span>Portfolio</span></a>
-        <!--<a href="index.html#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>-->
-        <a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+        <a href="#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+        <a href="#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+        <a href="#domain"><i class="fa fa-fw fa-check-circle-o"></i><span>Job Domain</span></a>
+        <a href="#academy"><i class="fa fa-fw fa-university"></i><span>Academy</span></a>
+        <a href="#work"><i class="fa fa-fw fa-briefcase"></i><span>Work</span></a>
+        <a href="#portfolio"><i class="fa fa-fw fa-tasks"></i><span>Portfolio</span></a>
+        <!--<a href="#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>-->
+        <a href="#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
     </div>
 </nav>
 ```
 
-
-
-`<i>` 태그는 아이콘을 뜻하는데 여기서는 [font awesome](http://fontawesome.io/icons/) 아이콘을 사용해요.
+`<i>` 태그는 아이콘 폰트를 뜻하는데 여기서는 [font awesome](http://fontawesome.io/icons/) 아이콘을 사용해요.
 링크된 페이지에서 더 예쁜 다른 아이콘으로 바꾸셔도 돼요!
+
+위에서 수정한 각 `<a>` 태그 라인에서 `<a href="index.html#home">`와 같이 
+`#` 뒤에 무언가가 붙어 있는 것 보이시나요?
+이건 한 페이지 안에서 특정 위치로 가기 위한 셀렉터(selector)에요.
+우리는 `home`, `about`, `domain`, `academy`, `work`, `portfolio`, `contact` 7개의 셀렉터를 지정했으니
+실제 그 이름(`id`)을 가진 섹션도 만들어주어야 해요.
+
+`home`, `about`은 이미 있으니 `service` 섹션을 찾아 `domain`으로 바꿔줄게요.
+`SERVICE SECTION`을 검색해서 아래와 같이 수정해주세요.
+```html
+
+```
+
