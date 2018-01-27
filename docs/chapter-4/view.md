@@ -30,8 +30,8 @@ ABOUT SECTION
 </section>
 ```
 
-이 부분을 전에 우리가 `About` 모델 안의 `desc_eng` 필드에 추가한 내응으로 자동 렌더링 할 수 있게
-바꿔볼게요.
+이 부분을 전에 우리가 `About` 모델 안의 `desc_eng` 필드에 추가한 내용으로 
+자동 렌더링 할 수 있게 바꿔볼게요.
 아래와 같이 수정해주세요.
 ```html
 <!-- ==========================
@@ -44,7 +44,7 @@ ABOUT SECTION
       <div class="col-md-8 col-md-offset-2 wp1">
         <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
         <!-- about / welcome text -->
-        <p>{{ about.about_me }}</p>
+        <p>{% raw %}{{ about.about_me }}{% endraw %}</p>
       </div>
     </div>
   </div>
