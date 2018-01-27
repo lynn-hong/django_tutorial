@@ -1,11 +1,16 @@
 from django.contrib import admin
-from .models import About, Domain, Experience, ExperienceType, Project, Publication, PublicationType
+from .models import About, Contact, Domain, Experience, ExperienceType, Project, Publication, PublicationType
 
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['about_me', 'home_img']
     list_display_links = ['about_me']
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['title', 'username', 'icon', 'c_url']
+    list_display_links = ['title']
 
 @admin.register(Domain)
 class DomainAdmin(admin.ModelAdmin):

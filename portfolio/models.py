@@ -83,6 +83,17 @@ class AuthUserUserPermissions(models.Model):
         db_table = 'auth_user_user_permissions'
 
 
+class Contact(models.Model):
+    title = models.CharField(max_length=45)
+    username = models.CharField(max_length=45, blank=True, null=True)
+    icon = models.CharField(max_length=255)
+    c_url = models.CharField(max_length=255)
+
+    class Meta:
+        managed = True
+        db_table = 'contact'
+
+
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
     object_id = models.TextField(blank=True, null=True)
