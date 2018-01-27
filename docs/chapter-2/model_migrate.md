@@ -15,6 +15,15 @@ CREATE TABLE `about` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `c_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 CREATE TABLE `domain` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title_kor` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -90,6 +99,7 @@ CREATE TABLE `publication` (
 | 테이블 이름 | 설명 |
 | ------ | ------ |
 | about | **메인 사진**, about 아래에 있는 **설명 문단**을 관리합니다 |
+| contact | 나 자신의 각종 **contact 정보**를 관리합니다 |
 | domain | 메인 페이지의 이름 아래 움직이는 텍스트, 나의 **관심 분야(Job domain) 설명** 등을 관리합니다 |
 | experience_type | 학업, 직장, 수상 등 **경력의 종류**를 관리합니다 |
 | experience | 학업, 직장, 수상 등 **경력 사항**을 관리합니다 |

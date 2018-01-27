@@ -43,13 +43,17 @@ from django.contrib import admin
 내용을 약간 수정하시려면 `portfolio/models.py` 파일을 열어 두고 참고하면서 바꿔주세요!
 ```python
 from django.contrib import admin
-from .models import About, Domain, Experience, ExperienceType, Project, Publication, PublicationType
+from .models import About, Contact, Domain, Experience, ExperienceType, Project, Publication, PublicationType
 
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     pass
 
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    pass
+    
 @admin.register(Domain)
 class DomainAdmin(admin.ModelAdmin):
     pass

@@ -16,7 +16,7 @@ django에는 view를 생성하는 방식이 굉장히 많아요!
 화면에 뿌려질 컨텐츠들을 그 하위 함수를 이용해 가져올 거에요.
 ```python
 from django.views.generic import TemplateView
-from .models import About, Domain, Experience, ExperienceType, Project, Publication, PublicationType
+from .models import About, Contact, Domain, Experience, ExperienceType, Project, Publication, PublicationType
 
 class Index(TemplateView):
     template_name = 'portfolio/index.html'
