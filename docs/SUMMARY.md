@@ -19,3 +19,6 @@
     * [url 만들기](chapter-3/url.md)
     * [템플릿 화면에 띄우기](chapter-3/template.md)
     * [html 파일에서 고정된 컨텐츠 수정](chapter-3/html.md)
+    
+* [Day 4]()
+    * [views 수정하기](chapter-4/view.md)
