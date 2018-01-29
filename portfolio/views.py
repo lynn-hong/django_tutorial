@@ -10,13 +10,13 @@ class Index(TemplateView):
         # desc. text of myself
         context['about'] = About.objects.first()
 
-        '''
+
         # contact info
         context['contacts'] = Contact.objects.all()
 
         # domain
-        context['domains'] = get_domain()
-
+        context['domains'] = Domain.objects.all()
+        '''
         # work experience
         context['works'] = get_ex("work")
 
