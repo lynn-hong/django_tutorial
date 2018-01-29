@@ -112,16 +112,16 @@ return 값인 `context` 안에 넣어줄 거에요.
         <div class="row">
           <div class="col-md-12">
               <div class="services">
-              {% raw %}{% for domain in domains %}{% endraw %}
+              {% raw %}{% for domain in domains %}
               <!-- Domain Box -->
                       <div class="col-md-4 wp2 item">
                         <div class="icon">
                           <i class="fa {{ domain.icon }}"></i><!-- Icon -->
                         </div>
-                        <h2>{% raw %}{{ domain.title_eng }}{% endraw %}</h2><!-- Title -->
-                        <p>{% raw %}{{ domain.desc_kor }}{% endraw %}</p><!-- Description -->
+                        <h2>{{ domain.title_eng }}</h2><!-- Title -->
+                        <p>{{ domain.desc_kor }}</p><!-- Description -->
                       </div>
-              {% raw %}{% endfor %}{% endraw %}
+              {% endfor %}{% endraw %}
               </div>
               <div class="clearfix"></div>
           </div>
