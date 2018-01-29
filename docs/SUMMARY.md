@@ -22,3 +22,4 @@
     
 * [Day 4]()
     * [views 수정하기](chapter-4/view.md)
+    * [쿼리셋 함수 만들기](chapter-4/queryset.md)
