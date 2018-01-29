@@ -116,7 +116,7 @@ return 값인 `context` 안에 넣어줄 거에요.
               <!-- Domain Box -->
                       <div class="col-md-4 wp2 item">
                         <div class="icon">
-                          <i class="fa {% raw %}{{ domain.icon }}{% endraw %}"></i><!-- Icon -->
+                          <i class="fa {{ domain.icon }}"></i><!-- Icon -->
                         </div>
                         <h2>{% raw %}{{ domain.title_eng }}{% endraw %}</h2><!-- Title -->
                         <p>{% raw %}{{ domain.desc_kor }}{% endraw %}</p><!-- Description -->
@@ -144,12 +144,12 @@ return 값인 `context` 안에 넣어줄 거에요.
 <div class="row">
   <div class="col-md-12">
     <ul class="social-buttons">
-      {% for contact in contacts %}
+      {% raw %}{% for contact in contacts %}{% endraw %}
           <li>
               <a href="{% raw %}{{ contact.c_url }}{% endraw %}" class="social-btn"><i class="fa {% raw %}{{ contact.icon }}{% endraw %}"></i>
               </a>
           </li><!-- {% raw %}{{ contact.title }}{% endraw %} -->
-      {% endfor %}
+      {% raw %}{% endfor %}{% endraw %}
     </ul>
   </div>
 </div>
