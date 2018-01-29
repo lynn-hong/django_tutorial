@@ -84,12 +84,88 @@ return 값인 `context` 안에 넣어줄 거에요.
 위에서는 하나의 데이터만을 가져와서 화면에 렌더링해 주었어요.
 이번에는 여러 개의 데이터를 가져와서 반복문을 이용해 화면에 보여줄 거에요.
 사용할 모델은 `Domain` 입니다.
-우선 `index.html` 파일을 열어 아래 부분을 수정해주세요.
+우선 `index.html` 파일을 열어 `DOMAIN SECTION`을 찾아주세요.
+아래와 같이 3개의 박스들이 하드코딩 되어 있어요.
+
+```html
+<!-- Service Box 1 -->
+(생략)
+<!-- Service Box 2 -->
+(생략)
+<!-- Service Box 3 -->
+```
+
+우리는 여기에 반복문을 이용해서 `Domain` 모델에 넣어 준 데이터를 자동으로 뿌려 줄 거에요.
+`DOMAIN SECTION`을 아래와 같이 수정해주세요.
+```html
+ <!-- ==========================
+    DOMAIN SECTION
+ =========================== -->
+    <section class="features text-center section-padding" id="domain">
+      <div class="container">
+    <!-- Headline -->
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="arrow">My interests and job domains</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="services">
+              {% raw %}{% for domain in domains %}{% endraw %}
+              <!-- Domain Box -->
+                      <div class="col-md-4 wp2 item">
+                        <div class="icon">
+                          <i class="fa {% raw %}{{ domain.icon }}{% endraw %}"></i><!-- Icon -->
+                        </div>
+                        <h2>{% raw %}{{ domain.title_eng }}{% endraw %}</h2><!-- Title -->
+                        <p>{% raw %}{{ domain.desc_kor }}{% endraw %}</p><!-- Description -->
+                      </div>
+              {% raw %}{% endfor %}{% endraw %}
+              </div>
+              <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+```
+
+짠! 아래와 같이 데이터가 자동으로 렌더링되었어요!
+
+![반복문을 이용한 데이터 뿌려주기](img/2.PNG)
+
+
+### 단순 쿼리셋으로 나머지 데이터 가져오기
+이제 나머지 부분들도 위와 같은 식으로 수정해볼게요.
+
+`Contact` 모델도 단순한 형태의 쿼리셋을 이용해 렌더링을 할 수 있어요.
+```html
+<!-- Social Buttons - use font-awesome, past in what you want -->
+<div class="row">
+  <div class="col-md-12">
+    <ul class="social-buttons">
+      {% for contact in contacts %}
+          <li>
+              <a href="{% raw %}{{ contact.c_url }}{% endraw %}" class="social-btn"><i class="fa {% raw %}{{ contact.icon }}{% endraw %}"></i>
+              </a>
+          </li><!-- {% raw %}{{ contact.title }}{% endraw %} -->
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+```
+
+![데이터 2개 렌더링된 contact](img/3.PNG)
+
+
+`{host}:{port}/admin`로 접속해서 admin 페이지에서 contact 데이터를 하나 추가해 보면,
+html 코드를 수정하지 않아도 아래와 같이 아이콘이 하나 늘어나게 돼요.
+
+![데이터 3개 렌더링된 contact](img/4.PNG)
 
 
 
 ### queryset 함수 만들기
-
 
 ```python
 class Index(TemplateView):
