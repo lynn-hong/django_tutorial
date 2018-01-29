@@ -70,11 +70,11 @@ ACADEMIC BACKGROUND SECTION
     <div class="row">
       <div class="col-md-8 col-md-offset-2 wp1">
         <h1 class="arrow"><span>Academic</span> background</h1><!-- Headline -->
-          {% for edu in edus %}
+          {% raw %}{% for edu in edus %}{% endraw %}
           <h3>{{ edu.title_eng }} | <a>{{ edu.location_eng }}</a> ({{ edu.s }} ~ {{ edu.e }})</h3>
           <p style="margin-top: 20px;">{{ edu.desc_kor }}</p>
             <br>
-          {% endfor %}
+          {% raw %}{% endfor %}{% endraw %}
       </div>
     </div>
   </div>
@@ -90,11 +90,11 @@ WORK EXPERIENCE SECTION
     <div class="row">
       <div class="col-md-8 col-md-offset-2 wp1">
         <h1 class="arrow"><span>Work</span> experience</h1><!-- Headline -->
-          {% for work in works %}
+          {% raw %}{% for work in works %}{% endraw %}
           <h3>{{ work.title_eng }} | <a>{{ work.location_eng }}</a> ({{ work.s }} ~ {{ work.e }})</h3>
           <p style="margin-top: 20px;">{{ work.desc_kor }}</p>
             <br>
-          {% endfor %}
+          {% raw %}{% endfor %}{% endraw %}
       </div>
     </div>
   </div>
